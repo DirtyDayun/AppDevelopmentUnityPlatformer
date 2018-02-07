@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
-
+	//THIS WILL BE STUPID
 	// Use this for initialization
 	void Start () {
 		
