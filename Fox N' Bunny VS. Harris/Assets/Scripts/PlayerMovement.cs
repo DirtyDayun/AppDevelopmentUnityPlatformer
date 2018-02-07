@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+	public float jumpSpeed;
+	public float gravity;
 	public float speed;
 	public string keyUp;
 	public string keyDown;
@@ -21,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Movement ();
+		Gravity ();
 	}
 
 	void Movement() {
@@ -33,5 +36,21 @@ public class PlayerMovement : MonoBehaviour {
 		} else {
 			velocity.x = 0;
 		}
+
+		if (Input.GetKey (keyUp)) {
+			Jump ();
+		}
+	}
+
+	void Gravity() {
+		if (velocity.y > -15) {
+			velocity.y -= gravity;
+		}
+
+
+	}
+
+	void Jump() {
+		velocity.y = jumpSpeed;
 	}
 }
