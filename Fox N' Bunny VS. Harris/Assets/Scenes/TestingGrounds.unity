@@ -736,8 +736,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f11e428e609fc44ac60d82206cad6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSpeed: 12
+  gravity: 0.75
   speed: 5
-  keyUp: 
+  keyUp: w
   keyDown: 
   keyLeft: a
   keyRight: d

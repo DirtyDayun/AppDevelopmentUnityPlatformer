@@ -47,7 +47,10 @@ public class PlayerMovement : MonoBehaviour {
 			velocity.y -= gravity;
 		}
 
-
+		RaycastHit2D ray1 = Physics2D.Raycast(transform.position - new Vector3(0.5f, 0), Vector2.down, 0.5f);
+		if (ray1.transform) {
+			print (ray1.transform);
+		}
 	}
 
 	void Jump() {
