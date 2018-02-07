@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
-	//THIS WILL BE STUPID
+
+	public string keyUp;
+	public string keyDown;
+	public string keyLeft;
+	public string keyRight;
+
+	private float speed;
+
 	// Use this for initialization
 	void Start () {
 		

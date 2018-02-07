@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+	public string keyUp;
+	public string keyDown;
+	public string keyLeft;
+	public string keyRight;
+
+	private float speed;
+
 	// Use this for initialization
 	void Start () {
 		
