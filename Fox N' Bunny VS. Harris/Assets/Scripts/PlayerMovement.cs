@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	private Rigidbody2D rb;
 	private Vector2 velocity;
+	private bool isGrounded;
 
 	// Use this for initialization
 	void Start () {
@@ -37,7 +38,7 @@ public class PlayerMovement : MonoBehaviour {
 			velocity.x = 0;
 		}
 
-		if (Input.GetKey (keyUp)) {
+		if (Input.GetKey (keyUp) && isGrounded) {
 			Jump ();
 		}
 	}
@@ -47,9 +48,10 @@ public class PlayerMovement : MonoBehaviour {
 			velocity.y -= gravity;
 		}
 
-		RaycastHit2D ray1 = Physics2D.Raycast(transform.position - new Vector3(0.5f, 0), Vector2.down, 0.5f);
-		if (ray1.transform) {
-			print (ray1.transform);
+		RaycastHit2D ray1 = Physics2D.Raycast(transform.position - new Vector3(0.5f, 0.25f), Vector2.down, 0.5f);
+		RaycastHit2D ray2 = Physics2D.Raycast(transform.position - new Vector3(-0.5f, 0.25f), Vector2.down, 0.5f);
+		if (ray1.transform || ray2.transform) {
+			isGrounded = true;
 		}
 	}
 
