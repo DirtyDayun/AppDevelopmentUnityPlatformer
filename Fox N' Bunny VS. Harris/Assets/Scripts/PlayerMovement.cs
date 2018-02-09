@@ -52,7 +52,11 @@ public class PlayerMovement : MonoBehaviour {
 		RaycastHit2D ray2 = Physics2D.Raycast(transform.position - new Vector3(-0.5f, 0.25f), Vector2.down, 0.5f);
 		if (ray1.transform || ray2.transform) {
 			isGrounded = true;
+		} else if (!ray1.transform && !ray2.transform) {
+			isGrounded = false;
 		}
+
+		print (isGrounded);
 	}
 
 	void Jump() {
