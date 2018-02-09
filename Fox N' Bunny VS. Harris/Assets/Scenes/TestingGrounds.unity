@@ -689,6 +689,7 @@ GameObject:
   - component: {fileID: 1909889060}
   - component: {fileID: 1909889059}
   - component: {fileID: 1909889061}
+  - component: {fileID: 1909889062}
   m_Layer: 0
   m_Name: Player_Fox
   m_TagString: Untagged
@@ -746,7 +747,7 @@ Transform:
   m_GameObject: {fileID: 1909889056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.32, y: 1.08, z: 0}
-  m_LocalScale: {x: 3.9501045, y: 3.9501045, z: 3.9501045}
+  m_LocalScale: {x: 4, y: 3.9501045, z: 3.9501045}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -828,6 +829,23 @@ PolygonCollider2D:
       - {x: 0.030193374, y: 0.10937501}
       - {x: 0.031773657, y: 0.045022346}
       - {x: -0.063160785, y: 0.04669437}
+--- !u!95 &1909889062
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909889056}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1935062761
 GameObject:
   m_ObjectHideFlags: 0
